@@ -3,6 +3,11 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Ensure links are distinguishable */
+a {
+    text-decoration: underline;
+}
+
 /* Diff output styling */
 #diffOutput pre {
     white-space: pre-wrap;       /* Ensure long lines wrap */
@@ -21,7 +26,7 @@ body {
 html.dark .diff-added {
   
     background-color: rgba(16, 185, 129, 0.3); /* Dark mode green background - Increased opacity */
-    color: #6ee7b7; /* Lighter green text for dark mode */
+    color: #a7f3d0; /* Lighter green text for dark mode - Increased contrast */
 }
 
 
@@ -35,7 +40,7 @@ html.dark .diff-added {
 }
 html.dark .diff-changed {
      background-color: rgba(249, 115, 22, 0.3); /* Dark mode orange background - Increased opacity */
-     color: #fdba74; /* Lighter orange text for dark mode */
+     color: #fed7aa; /* Lighter orange text for dark mode - Increased contrast */
 }
 
 /* Style for highlighting changed parts within a line (optional, more complex) */
