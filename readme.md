@@ -1,6 +1,6 @@
 # JSON Formatter & Diff Tool
 
-A highly SEO-optimized web app that provides **JSON Formatting** and **JSON Diff Comparison** in one simple, static tool. Built with Vanilla JS and TailwindCSS (via CDN).
+A Web app that provides **JSON Formatting** and **JSON Diff Comparison** in one simple, static tool. Built with Vanilla JS and TailwindCSS.
 
 ## Project Status
 
