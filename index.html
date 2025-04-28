@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easily format, validate, and compare JSON online. Free, secure, fast, and designed for developers. Paste your JSON and get started instantly.">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Online JSON Formatter and JSON Diff Tool - Free & Fast">
+    <meta property="og:description" content="Easily format, validate, and compare JSON online. Free, secure, fast, and designed for developers. Paste your JSON and get started instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="okeken.github.io/json-diff/index.html"> 
+
+    <!-- <meta property="og:image" content="YOUR_OG_IMAGE_URL_HERE"> --> <!-- Add OG image later -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Online JSON Formatter and JSON Diff Tool - Free & Fast">
+    <meta name="twitter:description" content="Easily format, validate, and compare JSON online. Free, secure, fast, and designed for developers. Paste your JSON and get started instantly.">
+    <!-- <meta name="twitter:image" content="YOUR_TWITTER_IMAGE_URL_HERE"> --> <!-- Add Twitter image later -->
+
+    <title>Online JSON Formatter and JSON Diff Tool - Free & Fast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+    
+      tailwind.config = {
+    darkMode: 'class',  }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add favicon link later -->
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Online JSON Formatter and JSON Diff Tool",
+      "description": "Easily format, validate, and compare JSON online. Free, secure, fast, and designed for developers.",
+      "url": "YOUR_DEPLOYMENT_URL_HERE", // Replace with actual URL later
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "JSON Diff  & Formatter Tool",
+        "applicationCategory": "DeveloperTool",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+    </script>
+     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does JSON Diff work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The JSON Diff tool compares two JSON objects semantically. It identifies fields that have been added, removed, or modified between the two inputs and visually highlights these differences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the comparison safe and private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all processing happens directly in your browser using JavaScript. Your JSON data is never sent to any server, ensuring your data remains private and secure."
+          }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I download diff results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Currently, the tool focuses on visual comparison within the browser. Downloading the diff results directly is not yet supported, but you can copy the highlighted differences."
+            }
+        }
+      ]
+    }
+    </script>
+</head>
+<style>
+
+</style>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+    <nav class="bg-white dark:bg-gray-800 shadow p-4 flex justify-between items-center">
+        <div class="text-xl font-bold">JSON Tools</div>
+        <div>
+            <a href="/" class="px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">JSON Diff</a>
+            <a href="/formatter.html" class="px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">JSON Formatter</a>
+            <button id="darkModeToggle" class="ml-4 px-3 py-2 rounded focus:outline-none dark:text-gray-200">🌙/☀️</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4 mt-8">
+        <section id="intro" class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Online JSON Diff Tool</h1>
+            <p class="text-lg mb-6">Paste two JSON objects below and instantly view their semantic differences. Detect added, removed, and modified fields visually. Fast, free, and secure.</p>
+             <div class="space-x-4">
+                 <a href="/formatter.html" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                      Go to JSON Formatter
+                 </a>
+            </div>
+            <p class="mt-6 text-gray-600 dark:text-gray-400">Need to format or validate JSON? Check out our <a href="/formatter.html" class="text-blue-500 dark:text-blue-400 hover:underline">JSON Formatter tool</a>.</p>
+        </section>
+
+        <section id="diff-tool">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label for="jsonInput1" class="block text-sm font-medium mb-1">JSON Input 1</label>
+                    <textarea id="jsonInput1" rows="15" class="w-full p-2 border rounded shadow-sm dark:bg-gray-700 dark:border-gray-600 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+                <div>
+                    <label for="jsonInput2" class="block text-sm font-medium mb-1">JSON Input 2</label>
+                    <textarea id="jsonInput2" rows="15" class="w-full p-2 border rounded shadow-sm dark:bg-gray-700 dark:border-gray-600 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+            </div>
+            <div class="text-center mb-4">
+                 <button id="compareBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded transition duration-300">
+                    Start Comparing
+                 </button>
+            </div>
+            <div>
+                <h2 class="text-2xl font-semibold mb-2">Differences</h2>
+                <div id="diffOutput" class="p-4 border rounded bg-white dark:bg-gray-800 shadow-sm min-h-[200px]">
+                    <!-- Diff results will be displayed here -->
+                     <p class="text-gray-500 dark:text-gray-400">Differences will appear here after comparison.</p>
+                </div>
+                 <button id="copyDiffBtn" class="mt-2 bg-gray-500 hover:bg-gray-600 text-white font-bold py-1 px-3 rounded transition duration-300 hidden">Copy Diff</button>
+            </div>
+        </section>
+
+         <section id="faq" class="mt-12">
+            <h2 class="text-3xl font-bold text-center mb-6">Frequently Asked Questions (FAQ)</h2>
+            <div class="space-y-4 max-w-2xl mx-auto">
+                <details class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                    <summary class="font-semibold cursor-pointer">How does JSON Diff work?</summary>
+                    <p class="mt-2 text-gray-700 dark:text-gray-300">The JSON Diff tool compares two JSON objects semantically. It identifies fields that have been added, removed, or modified between the two inputs and visually highlights these differences.</p>
+                </details>
+                <details class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                    <summary class="font-semibold cursor-pointer">Is the comparison safe and private?</summary>
+                    <p class="mt-2 text-gray-700 dark:text-gray-300">Yes, all processing happens directly in your browser using JavaScript. Your JSON data is never sent to any server, ensuring your data remains private and secure.</p>
+                </details>
+                 <details class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                    <summary class="font-semibold cursor-pointer">Can I download diff results?</summary>
+                    <p class="mt-2 text-gray-700 dark:text-gray-300">Currently, the tool focuses on visual comparison within the browser. Downloading the diff results directly is not yet supported, but you can copy the highlighted differences.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="monetization-placeholder" class="text-center mt-16 p-6 bg-yellow-100 dark:bg-yellow-800 dark:text-yellow-100 rounded border border-yellow-300 dark:border-yellow-600">
+            <h3 class="text-xl font-semibold mb-2">Unlock More Features!</h3>
+            <p>Upgrade to the Pro Version for features like history saving, cloud synchronization, and more!</p>
+            <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded transition duration-300">Learn More (Coming Soon)</button>
+        </section>
+    </main>
+
+    <footer class="text-center p-4 mt-8 text-gray-600 dark:text-gray-400 text-sm">
+        © <span id="year"></span> JSON Tools. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
