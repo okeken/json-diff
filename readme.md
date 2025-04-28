@@ -1,26 +1,26 @@
-# JSON Formatter & Diff Tool
+# Online JSON Diff & Formatter Tool
 
-A Web app that provides **JSON Formatting** and **JSON Diff Comparison** in one simple, static tool. Built with Vanilla JS and TailwindCSS.
+A simple, fast, and secure web app to **Compare JSON Online** and **Format JSON**. This tool functions as both a **JSON Formatter/Validator/Beautifier** and a **JSON Diff Checker**. Built with Vanilla JS and TailwindCSS, it runs entirely in your browser.
 
 ## Project Status
 
 This project implements the core features outlined below. It consists of two main pages:
 
--   `/index.html`: JSON Diff Comparison tool and landing page.
--   `/formatter.html`: JSON Formatter tool.
+-   `/index.html`: The **Online JSON Diff** tool. Use this page to **compare two JSON files online**.
+-   `/formatter.html`: The **Online JSON Formatter** tool. Use this to format, validate, beautify, and minify JSON.
 
 ## Features Implemented
 
--   **JSON Formatter (`/formatter.html`)**:
-    -   Pretty format raw JSON.
-    -   Validate invalid JSON and show clean error messages (including approximate location).
-    -   Minify JSON.
+-   **Online JSON Formatter & Validator (`/formatter.html`)**:
+    -   **Format & Beautify JSON**: Pretty-print raw or minified JSON for readability.
+    -   **Validate JSON**: Checks for syntax errors and provides clear messages.
+    -   **Minify JSON**: Compress JSON data by removing whitespace.
     -   Copy formatted/minified JSON to clipboard.
     -   Download formatted/minified JSON as a `.json` file.
     -   Option to auto-format JSON on paste.
--   **JSON Diff (`/index.html`)**:
-    -   Compare two JSON objects semantically.
-    -   Visually highlights added, removed, and changed fields using color-coding.
+-   **Online JSON Diff Tool (`/index.html`)**:
+    -   **Compare JSON Online**: Paste two JSON objects to compare them semantically with this **JSON compare tool**.
+    -   **Visual Difference Checker**: Visually highlights added, removed, and changed fields using color-coding.
     -   Copy diff results to clipboard.
 -   **General**:
     -   Dark Mode toggle (manual toggle + respects system preference initially).
@@ -53,4 +53,3 @@ This is a purely static web application. No build process or server is required.
     -   File download generation.
 
 ---
-

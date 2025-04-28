@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Format and beautify your JSON data online. Copy, download, and validate your JSON instantly. 100% free and secure.">
+    <meta name="description" content="Free online JSON Formatter, Validator, and Beautifier. Easily format, pretty-print, validate, and minify your JSON data. Secure, fast, and client-side processing.">
     <meta name="theme-color" content="#ffffff">
     <!-- OpenGraph -->
-    <meta property="og:title" content="JSON Formatter Online — Free, Fast, and Secure">
-    <meta property="og:description" content="Format and beautify your JSON data online. Copy, download, and validate your JSON instantly. 100% free and secure.">
+    <meta property="og:title" content="Online JSON Formatter & Validator - Beautify & Minify JSON">
+    <meta property="og:description" content="Free online JSON Formatter, Validator, and Beautifier. Easily format, pretty-print, validate, and minify your JSON data. Secure, fast, and client-side processing.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="YOUR_DEPLOYMENT_URL_HERE/formatter.html"> <!-- Replace with actual URL later -->
     <!-- <meta property="og:image" content="YOUR_OG_IMAGE_URL_HERE"> --> <!-- Add OG image later -->
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JSON Formatter Online — Free, Fast, and Secure">
-    <meta name="twitter:description" content="Format and beautify your JSON data online. Copy, download, and validate your JSON instantly. 100% free and secure.">
+    <meta name="twitter:title" content="Online JSON Formatter & Validator - Beautify & Minify JSON">
+    <meta name="twitter:description" content="Free online JSON Formatter, Validator, and Beautifier. Easily format, pretty-print, validate, and minify your JSON data. Secure, fast, and client-side processing.">
     <!-- <meta name="twitter:image" content="YOUR_TWITTER_IMAGE_URL_HERE"> --> <!-- Add Twitter image later -->
 
-    <title>JSON Formatter Online — Free, Fast, and Secure</title>
+    <title>Online JSON Formatter & Validator - Beautify & Minify JSON</title>
 
-     <link rel="stylesheet" href="base.css ">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-     
-    
     <link rel="stylesheet" href="style.css">
     <!-- Add favicon link later -->
     <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
@@ -32,12 +28,12 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "JSON Formatter Online",
-      "description": "Format and beautify your JSON data online. Copy, download, and validate your JSON instantly. 100% free and secure.",
+      "name": "Online JSON Formatter & Validator",
+      "description": "Free online JSON Formatter, Validator, and Beautifier. Easily format, pretty-print, validate, and minify your JSON data. Secure, fast, and client-side processing.",
       "url": "YOUR_DEPLOYMENT_URL_HERE/formatter.html", // Replace with actual URL later
        "mainEntity": {
         "@type": "SoftwareApplication",
-        "name": "JSON Formatter Tool",
+        "name": "JSON Formatter, Validator & Beautifier Tool",
         "applicationCategory": "DeveloperTool",
         "operatingSystem": "All",
         "offers": {
@@ -81,86 +77,86 @@
     }
     </script>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
-    <nav class="bg-white dark:bg-gray-800 shadow p-4 flex justify-between items-center">
-        <div class="text-xl font-bold">JSON Tools</div>
+<body> <!-- Removed Tailwind classes -->
+    <nav> <!-- Removed Tailwind classes -->
+        <div>JSON Tools</div> <!-- Removed Tailwind classes -->
         <div>
-          <a href="/json-diff" class="px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">JSON Diff</a>
-          <a href="/json-diff/formatter.html" class="px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">JSON Formatter</a>
-          <button id="darkModeToggle" class="ml-4 px-3 py-2 rounded focus:outline-none dark:text-gray-200">🌙/☀️</button>
+          <a href="/json-diff">JSON Diff</a> <!-- Removed Tailwind classes -->
+          <a href="/json-diff/formatter.html">JSON Formatter</a> <!-- Removed Tailwind classes -->
+          <button id="darkModeToggle">🌙/☀️</button> <!-- Removed Tailwind classes -->
       </div>
     </nav>
 
-    <main class="container mx-auto p-4 mt-8">
-        <section id="intro" class="text-center mb-12">
-            <h1 class="text-4xl font-bold mb-4">Free Online JSON Formatter</h1>
-            <p class="text-lg mb-6">Format and beautify your JSON data online. Copy, download, and validate your JSON instantly. 100% free and secure.</p>
-             <div class="space-x-4">
-                 <a href="/json-diff" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
-                     Go to JSON Diff Tool
+    <main class="container"> <!-- Removed Tailwind classes, kept container -->
+        <section id="intro"> <!-- Removed Tailwind classes -->
+            <h1>Online JSON Formatter & Validator</h1> <!-- Removed Tailwind classes -->
+            <p>Easily format, beautify (pretty-print), validate, and minify your JSON data online. Paste your JSON to instantly format it. Copy, download, and ensure your JSON is valid. 100% free, secure, and client-side.</p> <!-- Removed Tailwind classes -->
+             <div> <!-- Removed Tailwind classes -->
+                 <a href="/json-diff" class="button button-primary"> <!-- Removed Tailwind, added custom classes -->
+                     Need to Compare JSON? Go to JSON Diff Tool
                  </a>
             </div>
         </section>
 
         <section id="formatter-tool">
-            <div class="mb-4">
-                <label for="jsonInput" class="block text-sm font-medium mb-1">Paste your JSON here:</label>
-                <textarea id="jsonInput" rows="15" class="w-full p-2 border rounded shadow-sm dark:bg-gray-700 dark:border-gray-600 focus:ring-blue-500 focus:border-blue-500" placeholder="Paste or type your JSON data here..."></textarea>
-                <div id="validationError" class="text-red-500 dark:text-red-400 mt-1 text-sm hidden">Invalid JSON</div>
+            <div> <!-- Removed Tailwind classes -->
+                <label for="jsonInput">Paste your JSON here:</label> <!-- Removed Tailwind classes -->
+                <textarea id="jsonInput" rows="15" placeholder="Paste or type your JSON data here..."></textarea> <!-- Removed Tailwind classes -->
+                <div id="validationError" class="error-message hidden">Invalid JSON</div> <!-- Removed Tailwind, added custom class -->
             </div>
 
-            <div class="flex flex-wrap items-center gap-4 mb-4">
-                 <button id="formatBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+            <div class="formatter-controls"> <!-- Removed Tailwind, added custom class -->
+                 <button id="formatBtn" class="button button-success"> <!-- Removed Tailwind, added custom classes -->
                     Format JSON
                  </button>
-                 <button id="minifyBtn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                 <button id="minifyBtn" class="button button-warning"> <!-- Removed Tailwind, added custom classes -->
                     Minify JSON
                  </button>
-                 <button id="copyBtn" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                 <button id="copyBtn" class="button button-secondary"> <!-- Removed Tailwind, added custom classes -->
                     Copy to Clipboard
                  </button>
-                 <button id="downloadBtn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                 <button id="downloadBtn" class="button button-primary"> <!-- Removed Tailwind, added custom classes -->
                     Download JSON
                  </button>
-                 <label class="flex items-center space-x-2 cursor-pointer">
-                    <input type="checkbox" id="autoFormat" class="form-checkbox h-5 w-5 text-blue-600 dark:bg-gray-700 dark:border-gray-600 rounded">
-                    <span class="text-sm">Auto-format on paste</span>
+                 <label class="checkbox-label"> <!-- Removed Tailwind, added custom class -->
+                    <input type="checkbox" id="autoFormat"> <!-- Removed Tailwind classes -->
+                    <span>Auto-format on paste</span> <!-- Removed Tailwind classes -->
                 </label>
             </div>
 
             <div>
-                <h2 class="text-2xl font-semibold mb-2">Formatted Output:</h2>
-                <pre id="jsonOutput" class="p-4 border rounded bg-white dark:bg-gray-800 shadow-sm min-h-[200px] overflow-auto whitespace-pre-wrap break-words"><code class="language-json"></code></pre>
-                 <p id="outputPlaceholder" class="text-gray-500 dark:text-gray-400">Formatted JSON will appear here.</p>
+                <h2>Formatted Output:</h2> <!-- Removed Tailwind classes -->
+                <pre id="jsonOutput"><code class="language-json"></code></pre> <!-- Removed Tailwind classes -->
+                 <p id="outputPlaceholder" class="placeholder">Formatted JSON will appear here.</p> <!-- Removed Tailwind, added custom class -->
             </div>
         </section>
 
-         <section id="faq" class="mt-12">
-            <h2 class="text-3xl font-bold text-center mb-6">Frequently Asked Questions (FAQ)</h2>
-            <div class="space-y-4 max-w-2xl mx-auto">
-                <details class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-                    <summary class="font-semibold cursor-pointer">How to format JSON online?</summary>
-                    <p class="mt-2 text-gray-700 dark:text-gray-300">Simply paste your raw JSON data into the input area. The tool will automatically validate and format it into a readable structure. You can then copy the formatted JSON or download it as a file.</p>
+         <section id="faq"> <!-- Removed Tailwind classes -->
+            <h2>Frequently Asked Questions (FAQ)</h2> <!-- Removed Tailwind classes -->
+            <div class="faq-container"> <!-- Removed Tailwind classes, added custom class -->
+                <details> <!-- Removed Tailwind classes -->
+                    <summary>How to format JSON online?</summary> <!-- Removed Tailwind classes -->
+                    <p>Simply paste your raw JSON data into the input area. The tool will automatically validate and format it into a readable structure. You can then copy the formatted JSON or download it as a file.</p> <!-- Removed Tailwind classes -->
                 </details>
-                <details class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-                    <summary class="font-semibold cursor-pointer">Is my JSON data secure?</summary>
-                    <p class="mt-2 text-gray-700 dark:text-gray-300">Yes, absolutely. All JSON processing is done entirely within your browser using JavaScript. Your data is never sent to our servers, ensuring complete privacy and security.</p>
+                <details> <!-- Removed Tailwind classes -->
+                    <summary>Is my JSON data secure?</summary> <!-- Removed Tailwind classes -->
+                    <p>Yes, absolutely. All JSON processing is done entirely within your browser using JavaScript. Your data is never sent to our servers, ensuring complete privacy and security.</p> <!-- Removed Tailwind classes -->
                 </details>
-                 <details class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-                    <summary class="font-semibold cursor-pointer">Can I download the formatted JSON?</summary>
-                    <p class="mt-2 text-gray-700 dark:text-gray-300">Yes, after formatting your JSON, you can click the 'Download JSON' button to save the formatted data as a .json file directly to your computer.</p>
+                 <details> <!-- Removed Tailwind classes -->
+                    <summary>Can I download the formatted JSON?</summary> <!-- Removed Tailwind classes -->
+                    <p>Yes, after formatting your JSON, you can click the 'Download JSON' button to save the formatted data as a .json file directly to your computer.</p> <!-- Removed Tailwind classes -->
                 </details>
             </div>
         </section>
 
-        <section id="monetization-placeholder" class="text-center mt-16 p-6 bg-yellow-100 dark:bg-yellow-800 dark:text-yellow-100 rounded border border-yellow-300 dark:border-yellow-600">
-            <h3 class="text-xl font-semibold mb-2">Unlock More Features!</h3>
+        <section id="monetization-placeholder" class="promo-box"> <!-- Removed Tailwind, added custom class -->
+            <h3>Unlock More Features!</h3> <!-- Removed Tailwind classes -->
             <p>Upgrade to the Pro Version for features like history saving, cloud synchronization, and more!</p>
-            <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded transition duration-300">Learn More (Coming Soon)</button>
+            <button class="button button-warning">Learn More (Coming Soon)</button> <!-- Removed Tailwind, added custom classes -->
         </section>
     </main>
 
-    <footer class="text-center p-4 mt-8 text-gray-600 dark:text-gray-400 text-sm">
+    <footer> <!-- Removed Tailwind classes -->
         © <span id="year"></span> JSON Tools. All rights reserved.
     </footer>
 

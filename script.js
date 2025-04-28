@@ -67,14 +67,16 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 obj1 = JSON.parse(jsonStr1);
             } catch (e) {
-                diffOutput.innerHTML = '<p class="text-red-500">Error parsing JSON Input 1: ' + e.message + '</p>';
+                // Use custom error class
+                diffOutput.innerHTML = '<p class="error-message">Error parsing JSON Input 1: ' + e.message + '</p>';
                 return;
             }
 
             try {
                 obj2 = JSON.parse(jsonStr2);
             } catch (e) {
-                diffOutput.innerHTML = '<p class="text-red-500">Error parsing JSON Input 2: ' + e.message + '</p>';
+                // Use custom error class
+                diffOutput.innerHTML = '<p class="error-message">Error parsing JSON Input 2: ' + e.message + '</p>';
                 return;
             }
 
@@ -202,10 +204,11 @@ function displayDiff(diffResult, outputElement) {
                 }
             }
         }
-    }
+     }
 
      if (!hasContent) {
-         html += '<span class="text-green-500 dark:text-green-400">No differences found.</span>';
+         // Use custom success class
+         html += '<span class="success-message">No differences found.</span>';
      }
 
     html += '</pre>';
