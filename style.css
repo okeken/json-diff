@@ -69,13 +69,15 @@ a:hover {
     color: var(--primary-hover-color);
 }
 
-html.dark a {
-    color:white;
-}
-html.dark a:hover {
+
+  a:hover {
     color: #93c5fd; 
 }
 
+a:hover {
+    text-decoration: underline;
+    /* color: var(--primary-hover-color); */
+}
 
 /* Headings */
 h1, h2, h3 {
