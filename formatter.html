@@ -9,7 +9,7 @@
     <meta property="og:title" content="Online JSON Formatter & Validator - Beautify & Minify JSON">
     <meta property="og:description" content="Free online JSON Formatter, Validator, and Beautifier. Easily format, pretty-print, validate, and minify your JSON data. Secure, fast, and client-side processing.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="YOUR_DEPLOYMENT_URL_HERE/formatter.html"> <!-- Replace with actual URL later -->
+    <meta property="og:url" content="https://json-diff.cc/"> 
     <!-- <meta property="og:image" content="YOUR_OG_IMAGE_URL_HERE"> --> <!-- Add OG image later -->
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -77,86 +77,86 @@
     }
     </script>
 </head>
-<body> <!-- Removed Tailwind classes -->
-    <nav> <!-- Removed Tailwind classes -->
-        <div>JSON Tools</div> <!-- Removed Tailwind classes -->
+<body> 
+    <nav> 
+        <div>JSON Tools</div> 
         <div>
-          <a href="/json-diff">JSON Diff</a> <!-- Removed Tailwind classes -->
-          <a href="/json-diff/formatter.html">JSON Formatter</a> <!-- Removed Tailwind classes -->
-          <button id="darkModeToggle">🌙/☀️</button> <!-- Removed Tailwind classes -->
+          <a href="/">JSON Diff</a> 
+          <a href="/formatter.html">JSON Formatter</a> 
+          <button id="darkModeToggle">🌙/☀️</button> 
       </div>
     </nav>
 
-    <main class="container"> <!-- Removed Tailwind classes, kept container -->
-        <section id="intro"> <!-- Removed Tailwind classes -->
-            <h1>Online JSON Formatter & Validator</h1> <!-- Removed Tailwind classes -->
-            <p>Easily format, beautify (pretty-print), validate, and minify your JSON data online. Paste your JSON to instantly format it. Copy, download, and ensure your JSON is valid. 100% free, secure, and client-side.</p> <!-- Removed Tailwind classes -->
-             <div> <!-- Removed Tailwind classes -->
-                 <a href="/json-diff" class="button button-primary"> <!-- Removed Tailwind, added custom classes -->
+    <main class="container"> 
+        <section id="intro"> 
+            <h1>Online JSON Formatter & Validator</h1> 
+            <p>Easily format, beautify (pretty-print), validate, and minify your JSON data online. Paste your JSON to instantly format it. Copy, download, and ensure your JSON is valid. 100% free, secure, and client-side.</p> 
+             <div> 
+                 <a href="/" class="button button-primary"> 
                      Need to Compare JSON? Go to JSON Diff Tool
                  </a>
             </div>
         </section>
 
         <section id="formatter-tool">
-            <div> <!-- Removed Tailwind classes -->
-                <label for="jsonInput">Paste your JSON here:</label> <!-- Removed Tailwind classes -->
-                <textarea id="jsonInput" rows="15" placeholder="Paste or type your JSON data here..."></textarea> <!-- Removed Tailwind classes -->
-                <div id="validationError" class="error-message hidden">Invalid JSON</div> <!-- Removed Tailwind, added custom class -->
+            <div> 
+                <label for="jsonInput">Paste your JSON here:</label> 
+                <textarea id="jsonInput" rows="15" placeholder="Paste or type your JSON data here..."></textarea> 
+                <div id="validationError" class="error-message hidden">Invalid JSON</div> 
             </div>
 
-            <div class="formatter-controls"> <!-- Removed Tailwind, added custom class -->
-                 <button id="formatBtn" class="button button-success"> <!-- Removed Tailwind, added custom classes -->
+            <div class="formatter-controls"> 
+                 <button id="formatBtn" class="button button-success"> 
                     Format JSON
                  </button>
-                 <button id="minifyBtn" class="button button-warning"> <!-- Removed Tailwind, added custom classes -->
+                 <button id="minifyBtn" class="button button-warning"> 
                     Minify JSON
                  </button>
-                 <button id="copyBtn" class="button button-secondary"> <!-- Removed Tailwind, added custom classes -->
+                 <button id="copyBtn" class="button button-secondary"> 
                     Copy to Clipboard
                  </button>
-                 <button id="downloadBtn" class="button button-primary"> <!-- Removed Tailwind, added custom classes -->
+                 <button id="downloadBtn" class="button button-primary"> 
                     Download JSON
                  </button>
-                 <label class="checkbox-label"> <!-- Removed Tailwind, added custom class -->
-                    <input type="checkbox" id="autoFormat"> <!-- Removed Tailwind classes -->
-                    <span>Auto-format on paste</span> <!-- Removed Tailwind classes -->
+                 <label class="checkbox-label"> 
+                    <input type="checkbox" id="autoFormat"> 
+                    <span>Auto-format on paste</span> 
                 </label>
             </div>
 
             <div>
-                <h2>Formatted Output:</h2> <!-- Removed Tailwind classes -->
-                <pre id="jsonOutput"><code class="language-json"></code></pre> <!-- Removed Tailwind classes -->
-                 <p id="outputPlaceholder" class="placeholder">Formatted JSON will appear here.</p> <!-- Removed Tailwind, added custom class -->
+                <h2>Formatted Output:</h2> 
+                <pre id="jsonOutput"><code class="language-json"></code></pre> 
+                 <p id="outputPlaceholder" class="placeholder">Formatted JSON will appear here.</p> 
             </div>
         </section>
 
-         <section id="faq"> <!-- Removed Tailwind classes -->
-            <h2>Frequently Asked Questions (FAQ)</h2> <!-- Removed Tailwind classes -->
+         <section id="faq"> 
+            <h2>Frequently Asked Questions (FAQ)</h2> 
             <div class="faq-container"> <!-- Removed Tailwind classes, added custom class -->
-                <details> <!-- Removed Tailwind classes -->
-                    <summary>How to format JSON online?</summary> <!-- Removed Tailwind classes -->
-                    <p>Simply paste your raw JSON data into the input area. The tool will automatically validate and format it into a readable structure. You can then copy the formatted JSON or download it as a file.</p> <!-- Removed Tailwind classes -->
+                <details> 
+                    <summary>How to format JSON online?</summary> 
+                    <p>Simply paste your raw JSON data into the input area. The tool will automatically validate and format it into a readable structure. You can then copy the formatted JSON or download it as a file.</p> 
                 </details>
-                <details> <!-- Removed Tailwind classes -->
-                    <summary>Is my JSON data secure?</summary> <!-- Removed Tailwind classes -->
-                    <p>Yes, absolutely. All JSON processing is done entirely within your browser using JavaScript. Your data is never sent to our servers, ensuring complete privacy and security.</p> <!-- Removed Tailwind classes -->
+                <details> 
+                    <summary>Is my JSON data secure?</summary> 
+                    <p>Yes, absolutely. All JSON processing is done entirely within your browser using JavaScript. Your data is never sent to our servers, ensuring complete privacy and security.</p> 
                 </details>
-                 <details> <!-- Removed Tailwind classes -->
-                    <summary>Can I download the formatted JSON?</summary> <!-- Removed Tailwind classes -->
-                    <p>Yes, after formatting your JSON, you can click the 'Download JSON' button to save the formatted data as a .json file directly to your computer.</p> <!-- Removed Tailwind classes -->
+                 <details> 
+                    <summary>Can I download the formatted JSON?</summary> 
+                    <p>Yes, after formatting your JSON, you can click the 'Download JSON' button to save the formatted data as a .json file directly to your computer.</p> 
                 </details>
             </div>
         </section>
 
-        <section id="monetization-placeholder" class="promo-box"> <!-- Removed Tailwind, added custom class -->
-            <h3>Unlock More Features!</h3> <!-- Removed Tailwind classes -->
+        <section id="monetization-placeholder" class="promo-box"> 
+            <h3>Unlock More Features!</h3> 
             <p>Upgrade to the Pro Version for features like history saving, cloud synchronization, and more!</p>
-            <button class="button button-warning">Learn More (Coming Soon)</button> <!-- Removed Tailwind, added custom classes -->
+            <button class="button button-warning">Learn More (Coming Soon)</button> 
         </section>
     </main>
 
-    <footer> <!-- Removed Tailwind classes -->
+    <footer> 
         © <span id="year"></span> JSON Tools. All rights reserved.
     </footer>
 

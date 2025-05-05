@@ -68,12 +68,14 @@ a:hover {
     text-decoration: underline;
     color: var(--primary-hover-color);
 }
+
 html.dark a {
-    color: #93c5fd; /* Lighter blue for dark mode */
+    color:white;
 }
 html.dark a:hover {
-    color: #60a5fa;
+    color: #93c5fd; 
 }
+
 
 /* Headings */
 h1, h2, h3 {

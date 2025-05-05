@@ -11,7 +11,7 @@
     <meta property="og:title" content="JSON Diff - Compare JSON Online | Free & Fast JSON Compare Tool">
     <meta property="og:description" content="Compare JSON online with our free JSON Diff tool. A fast and secure JSON difference checker for developers. Paste two JSON objects and see the differences instantly.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="okeken.github.io/json-diff/index.html"> 
+    <meta property="og:url" content="https://json-diff.cc/"> 
 
     <!-- <meta property="og:image" content="YOUR_OG_IMAGE_URL_HERE"> --> <!-- Add OG image later -->
 
@@ -25,7 +25,7 @@
     
     <link rel="stylesheet" href="style.css">
 
-    <!-- Add favicon link later -->
+   
     <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
 
     <!-- Schema Markup -->
@@ -85,80 +85,80 @@
 <style>
 
 </style>
-<body> <!-- Removed Tailwind classes -->
-    <nav> <!-- Removed Tailwind classes -->
-        <div>JSON Tools</div> <!-- Removed Tailwind classes -->
+<body> 
+    <nav> 
+        <div>JSON Tools</div> 
         <div>
-            <a href="/json-diff/">JSON Diff</a> <!-- Removed Tailwind classes -->
-            <a href="/json-diff/formatter.html">JSON Formatter</a> <!-- Removed Tailwind classes -->
-            <button id="darkModeToggle">🌙/☀️</button> <!-- Removed Tailwind classes -->
+            <a href="/">JSON Diff</a> 
+            <a href="/formatter.html">JSON Formatter</a> 
+            <button id="darkModeToggle">🌙/☀️</button> 
         </div>
     </nav>
 
-    <main class="container"> <!-- Removed Tailwind classes, kept container -->
-        <section id="intro"> <!-- Removed Tailwind classes -->
-            <h1>Online JSON Diff Tool - Compare JSON Instantly</h1> <!-- Removed Tailwind classes -->
-            <p>Use this online JSON diff tool to compare two JSON files or objects. Paste your JSON below to instantly view semantic differences with our JSON difference checker. Detect added, removed, and modified fields visually. Fast, free, and secure.</p> <!-- Removed Tailwind classes -->
-             <div> <!-- Removed Tailwind classes -->
-                 <a href="/json-diff/formatter.html" class="button button-primary"> <!-- Removed Tailwind, added custom classes -->
+    <main class="container"> 
+        <section id="intro"> 
+            <h1>Online JSON Diff Tool - Compare JSON Instantly</h1> 
+            <p>Use this online JSON diff tool to compare two JSON files or objects. Paste your JSON below to instantly view semantic differences with our JSON difference checker. Detect added, removed, and modified fields visually. Fast, free, and secure.</p> 
+             <div> 
+                 <a href="/formatter.html" class="button button-primary"> 
                       Go to JSON Formatter
                  </a>
             </div>
-            <p>Need to format or validate JSON? Check out our <a href="/json-diff/formatter.html">JSON Formatter tool</a>.</p> <!-- Removed Tailwind classes -->
+            <p>Need to format or validate JSON? Check out our <a href="/formatter.html">JSON Formatter tool</a>.</p> 
         </section>
 
         <section id="diff-tool">
-            <div class="diff-inputs"> <!-- Removed Tailwind grid, added custom class -->
+            <div class="diff-inputs"> 
                 <div>
-                    <label for="jsonInput1">JSON Input 1</label> <!-- Removed Tailwind classes -->
-                    <textarea id="jsonInput1" rows="15"></textarea> <!-- Removed Tailwind classes -->
+                    <label for="jsonInput1">JSON Input 1</label> 
+                    <textarea id="jsonInput1" rows="15"></textarea> 
                 </div>
                 <div>
-                    <label for="jsonInput2">JSON Input 2</label> <!-- Removed Tailwind classes -->
-                    <textarea id="jsonInput2" rows="15"></textarea> <!-- Removed Tailwind classes -->
+                    <label for="jsonInput2">JSON Input 2</label> 
+                    <textarea id="jsonInput2" rows="15"></textarea> 
                 </div>
             </div>
-            <div class="diff-controls"> <!-- Added wrapper, removed text-center -->
-                 <button id="compareBtn" class="button button-success"> <!-- Removed Tailwind, added custom classes -->
+            <div class="diff-controls"
+                 <button id="compareBtn" class="button button-success"> 
                     Start Comparing
                  </button>
             </div>
             <div>
-                <h2>Differences</h2> <!-- Removed Tailwind classes -->
-                <div id="diffOutput"> <!-- Removed Tailwind classes -->
+                <h2>Differences</h2> 
+                <div id="diffOutput"> 
                     <!-- Diff results will be displayed here -->
-                     <p class="placeholder">Differences will appear here after comparison.</p> <!-- Removed Tailwind, added custom class -->
+                     <p class="placeholder">Differences will appear here after comparison.</p>
                 </div>
-                 <button id="copyDiffBtn" class="button button-secondary hidden">Copy Diff</button> <!-- Removed Tailwind, added custom classes -->
+                 <button id="copyDiffBtn" class="button button-secondary hidden">Copy Diff</button> 
             </div>
         </section>
 
-         <section id="faq"> <!-- Removed Tailwind classes -->
-            <h2>Frequently Asked Questions (FAQ)</h2> <!-- Removed Tailwind classes -->
+         <section id="faq"> 
+            <h2>Frequently Asked Questions (FAQ)</h2> 
             <div class="faq-container"> <!-- Removed Tailwind classes, added custom class -->
-                <details> <!-- Removed Tailwind classes -->
-                    <summary>How does JSON Diff work?</summary> <!-- Removed Tailwind classes -->
-                    <p>The JSON Diff tool compares two JSON objects semantically. It identifies fields that have been added, removed, or modified between the two inputs and visually highlights these differences.</p> <!-- Removed Tailwind classes -->
+                <details> 
+                    <summary>How does JSON Diff work?</summary> 
+                    <p>The JSON Diff tool compares two JSON objects semantically. It identifies fields that have been added, removed, or modified between the two inputs and visually highlights these differences.</p> 
                 </details>
-                <details> <!-- Removed Tailwind classes -->
-                    <summary>Is the comparison safe and private?</summary> <!-- Removed Tailwind classes -->
-                    <p>Yes, all processing happens directly in your browser using JavaScript. Your JSON data is never sent to any server, ensuring your data remains private and secure.</p> <!-- Removed Tailwind classes -->
+                <details> 
+                    <summary>Is the comparison safe and private?</summary> 
+                    <p>Yes, all processing happens directly in your browser using JavaScript. Your JSON data is never sent to any server, ensuring your data remains private and secure.</p> 
                 </details>
-                 <details> <!-- Removed Tailwind classes -->
-                    <summary>Can I download diff results?</summary> <!-- Removed Tailwind classes -->
-                    <p>Currently, the tool focuses on visual comparison within the browser. Downloading the diff results directly is not yet supported, but you can copy the highlighted differences.</p> <!-- Removed Tailwind classes -->
+                 <details> 
+                    <summary>Can I download diff results?</summary> 
+                    <p>Currently, the tool focuses on visual comparison within the browser. Downloading the diff results directly is not yet supported, but you can copy the highlighted differences.</p> 
                 </details>
             </div>
         </section>
 
-        <section id="monetization-placeholder" class="promo-box"> <!-- Removed Tailwind, added custom class -->
-            <h3>Unlock More Features!</h3> <!-- Removed Tailwind classes -->
+        <section id="monetization-placeholder" class="promo-box">
+            <h3>Unlock More Features!</h3> 
             <p>Upgrade to the Pro Version for features like history saving, cloud synchronization, and more!</p>
-            <button class="button button-warning">Learn More (Coming Soon)</button> <!-- Removed Tailwind, added custom classes -->
+            <button class="button button-warning">Learn More (Coming Soon)</button> 
         </section>
     </main>
 
-    <footer> <!-- Removed Tailwind classes -->
+    <footer> 
         © <span id="year"></span> JSON Tools. All rights reserved.
     </footer>
 
